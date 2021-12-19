@@ -1,6 +1,5 @@
 from tkinter import *
 import sqlite3
-import matplotlib.pyplot as plt
 import time
 
 def clickok():
@@ -15,8 +14,8 @@ def clickok():
         button.config(command=lambda:button.pack_forget())
         l2=Label(deletewin,fg="red",text="Deleted Successfully",font=("Helvetica",10)).place(x=6,y=115)
 
-    except:
-        l2=Label(deletewin,fg="red",text="No Such Record Found",font=("Helvetica",10)).place(x=6,y=115)        
+
+        # l2=Label(deletewin,fg="red",text="No Such Record Found",font=("Helvetica",10)).place(x=6,y=115)        
 
     finally:
         deletewin.after(3000,lambda:deletewin.destroy())       
